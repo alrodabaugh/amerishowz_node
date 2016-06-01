@@ -1,13 +1,13 @@
 var express = require('express');
 var app = express();
+var routes = require('./routes');
 
 app.set('view engine', 'ejs');
 
-app.get('/', function(req, res){
-  res.render('default', {
-    title: 'Home'
-  });
-});
+app.locals.pagetitle = "Awesome Website"
+
+app.get('/', routes.index)
+app.get('/opportunity', routes.opportunity)
 
 app.get('*', function(req, res){
   res.send('Bad Route');

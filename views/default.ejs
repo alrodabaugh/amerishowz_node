@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><%= title %></title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-</head>
-<body>
+<head><% include partials/page/head.ejs %></head>
+<body class="<%= classname %>">
+<% include partials/page/header.ejs %>
 
-  <h1><%= title %></h1>
+<div class="container">
+  <h1><%= pagetitle%> <%= title %></h1>
   <p>some boring text and what not</p>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-  </body>
+</div>
+
+<% include partials/page/footer.ejs %>
+<% include partials/page/jsdefaults.ejs %>
+
+</body>
 </html>
